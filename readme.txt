@@ -15,6 +15,7 @@ for start (as usual user):
 
    добавить скрипты в package.json:
    "scripts": {
+    "watch": "webpack --mode development --watch",
     "dev":    "webpack --mode development",
     "build":  "webpack --mode production"
    }
@@ -23,6 +24,7 @@ for start (as usual user):
    npm install .      - поставить все зависимости
    npm run dev        - собрать через webpack в режиме разработки
    npm run build      - собрать через webpack в режиме production (минифицированные файлы и т.п.)
+   npm run watch      - в таком случае процесс сборки висит и следит за изменениями
 
 
 

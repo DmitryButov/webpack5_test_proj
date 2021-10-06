@@ -4,6 +4,7 @@
   "description": "webpack titorial test proj",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --mode development --watch",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
