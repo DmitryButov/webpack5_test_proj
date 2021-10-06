@@ -16,7 +16,6 @@
   "author": "Dmitrii Butov <bdswork@mail.ru>",
   "license": "ISC",
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
     "style-loader": "^3.3.0",
