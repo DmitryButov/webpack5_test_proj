@@ -3,6 +3,11 @@
 for start (as usual user):
    docker-compose run --rm -u 1000 nodejs-dev
 
+
+лог команд:
+   npm init                             - создать новый nodejs package - запускать в корне(директория app) 
+   npm install -D webpack webpack-cli   - поставить webpack
+
 ----------------
 
 tutorial based on:

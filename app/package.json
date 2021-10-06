@@ -11,5 +11,9 @@
     "webpack"
   ],
   "author": "Dmitrii Butov <bdswork@mail.ru>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0"
+  }
 }
