@@ -8,6 +8,8 @@ for start (as usual user):
  # при создании проекта
    npm init                             - создать новый nodejs package - запускать в корне(директория app)
    npm install -D webpack webpack-cli   - поставить webpack вручную
+   npm install -D clean-webpack-plugin  - доп пакеты...
+
    добавить скрипты в package.json:
    "scripts": {
     "dev":    "webpack --mode development",
