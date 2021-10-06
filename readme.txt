@@ -9,8 +9,9 @@ for start (as usual user):
    npm init                             - создать новый nodejs package - запускать в корне(директория app)
    npm install -D webpack webpack-cli   - поставить webpack вручную
    # также потребуется установить доп. плагины (тоже как development-зависимости)
-   npm install -D clean-webpack-plugin
-   npm i -D html-webpack-plugin
+   npm i -D clean-webpack-plugin html-webpack-plugin
+   # и лоадеры (как минимум для сss)
+   npm i -D style-loader css-loader
 
    добавить скрипты в package.json:
    "scripts": {
