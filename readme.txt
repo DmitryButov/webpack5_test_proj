@@ -36,6 +36,11 @@ tutorial based on:
 https://www.youtube.com/watch?v=eSaF8NXeNsA&t=1210s
 
 
+webpack5 docs:
+    https://webpack.js.org/configuration/output/#template-strings
+    https://webpack.js.org/guides/asset-modules/
+
+
 node.js related:
     video:
         https://www.youtube.com/watch?v=3aGSqasVPsI
