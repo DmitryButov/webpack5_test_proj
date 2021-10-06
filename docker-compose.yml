@@ -5,8 +5,5 @@ services:
         volumes:
             - ./app/:/app/
         command: "/bin/bash"
-
-#    ports:
-#      - 50022:50002
-
-
+        ports:
+            - 8888:8888

@@ -2,8 +2,8 @@
 Getting started
 --------------------
 
-for start (as usual user):
-   docker-compose run --rm -u 1000 nodejs-dev
+for start (as usual user, and use "ports" part for expose)
+   docker-compose run --rm --service-ports -u 1000 nodejs-dev
 
  # при создании проекта
    npm init                             - создать новый nodejs package - запускать в корне(директория app)
@@ -11,13 +11,14 @@ for start (as usual user):
    # также потребуется установить доп. плагины (тоже как development-зависимости)
    npm i -D clean-webpack-plugin html-webpack-plugin
    # и лоадеры (как минимум для сss)
-   npm i -D style-loader css-loader
+   npm i -D style-loader css-loader    - для сss
 
    добавить скрипты в package.json:
    "scripts": {
     "watch": "webpack --mode development --watch",
     "dev":    "webpack --mode development",
-    "build":  "webpack --mode production"
+    "build":  "webpack --mode production",
+    "srv":    "(cd ./dist && python3 -m http.server 8888)"
    }
 
 # использование
