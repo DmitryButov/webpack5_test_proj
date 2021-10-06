@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+    nodejs-dev:
+        image: node:16
+        volumes:
+            - ./app/:/app/
+        command: "/bin/bash"
+
+#    ports:
+#      - 50022:50002
+
+
