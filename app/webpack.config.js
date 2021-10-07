@@ -13,6 +13,13 @@ module.exports = {
         assetModuleFilename: 'images/[hash][ext][query]',
         clean: true
     },
+    resolve: {
+        alias: {
+            '@models': path.resolve(__dirname, 'src/models'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+            '@assets': path.resolve(__dirname, 'src/assets')
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
