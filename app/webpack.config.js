@@ -3,16 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
-    entry: {
-      main: './index.js',
-      analytics: './analytics.js'
-    },
-    output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[hash][ext][query]',
-        clean: true
-    },
     resolve: {
         alias: {
             '@models': path.resolve(__dirname, 'src/models'),
@@ -20,6 +10,25 @@ module.exports = {
             '@assets': path.resolve(__dirname, 'src/assets')
         }
     },
+    entry: {
+        main: './index.js',
+        analytics: './analytics.js'
+    },
+    output: {
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'images/[hash][ext][query]',
+        clean: true
+    },
+    stats: {
+        entrypoints: true,
+        assets: true,
+    },
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all'
+    //     }
+    // },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
