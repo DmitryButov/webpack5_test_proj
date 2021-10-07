@@ -2,7 +2,7 @@
   "name": "webpack_test",
   "version": "1.0.0",
   "description": "webpack titorial test proj",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "watch": "webpack --mode development --watch",
     "dev": "webpack --mode development",
