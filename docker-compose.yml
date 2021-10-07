@@ -1,7 +1,8 @@
 version: '3.5'
 services:
     nodejs-dev:
-        image: node:16
+        build:
+          context: .
         volumes:
             - ./app/:/app/
         command: "/bin/bash"
