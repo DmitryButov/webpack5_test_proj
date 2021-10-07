@@ -18,10 +18,7 @@ for start (as usual user, and use "ports" part for expose)
 
     добавить скрипты в package.json:
     "scripts": {
-        "watch": "webpack --mode development --watch",
-        "dev":    "webpack --mode development",
-        "build":  "webpack --mode production",
-        "srv":    "(cd ./dist && python3 -m http.server 8888)"
+        ....
     }
 
 # использование
