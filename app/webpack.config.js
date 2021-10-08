@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -26,11 +27,10 @@ module.exports = {
         entrypoints: true,
         assets: true,
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all'
-    //     }
-    // },
+    optimization: {
+        //splitChunks: { chunks: 'all' },
+        minimizer: [ new CssMinimizerPlugin(), '...' ]
+    },
     devServer: {
         port: 8888
     },
