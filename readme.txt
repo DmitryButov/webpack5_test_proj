@@ -10,6 +10,7 @@ for start (as usual user, and use "ports" part for expose)
     npm install -D webpack webpack-cli   - поставить webpack вручную
     # также потребуется установить доп. плагины (тоже как development-зависимости)
     npm i -D html-webpack-plugin
+    npm install copy-webpack-plugin --save-dev   - для копирования static-файлов как есть
     # и лоадеры (как минимум для сss)
     npm i -D style-loader css-loader    - для сss
 
