@@ -35,6 +35,7 @@ see instruction on  https://babeljs.io/setup, select webpack
 
 npm install --save-dev babel-loader @babel/core
 npm install --save-dev @babel/preset-env
+npm install --save core-js       # core-js@3    3.18
 
 
 

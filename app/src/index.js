@@ -1,3 +1,6 @@
+import "core-js/stable"
+import "regenerator-runtime/runtime"
+
 import '@styles/styles.css'
 import Post from '@models/Post'
 import WebpackLogo from '@assets/wp5_logo.jpg'
