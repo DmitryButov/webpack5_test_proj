@@ -4,6 +4,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
+
+babel_loader_options = {
+    "presets":
+    [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": 'entry',
+                "corejs": '3.18'
+            }
+        ]
+    ]
+}
+
+
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     resolve: {
@@ -58,17 +73,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        "presets": [
-                            [
-                                "@babel/preset-env",
-                                {
-                                    "useBuiltIns": 'entry',
-                                    "corejs": '3.18'
-                                }
-                            ]
-                        ]
-                    }
+                    options: babel_loader_options
                 }
             },
             {
