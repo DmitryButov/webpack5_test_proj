@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const devMode = process.env.NODE_ENV !== "production"
-console.log('!!! devMode = ', devMode)
 
 babel_loader_options = {
     "presets":
@@ -20,8 +19,7 @@ babel_loader_options = {
     ]
 }
 
-
-module.exports = {
+wp_config = {
     context: path.resolve(__dirname, 'src'),
     resolve: {
         alias: {
@@ -48,10 +46,6 @@ module.exports = {
         //splitChunks: { chunks: 'all' },
         minimizer: [ new CssMinimizerPlugin(), '...' ]
     },
-    devServer: {
-        port: 8888
-    },
-    //devtool: 'source-map',  //if devMode
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
@@ -90,3 +84,15 @@ module.exports = {
         ]
     }
 }
+
+const create_webpack_config = () =>
+{
+    if (devMode)
+    {
+        wp_config.devtool = 'source-map'
+        wp_config.devServer = { port: 8888 }
+    }
+    return wp_config
+}
+
+module.exports = create_webpack_config()
