@@ -4,6 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
+const devMode = process.env.NODE_ENV !== "production"
+console.log('!!! devMode = ', devMode)
 
 babel_loader_options = {
     "presets":
@@ -49,6 +51,7 @@ module.exports = {
     devServer: {
         port: 8888
     },
+    //devtool: 'source-map',  //if devMode
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
