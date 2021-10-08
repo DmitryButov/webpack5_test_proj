@@ -29,6 +29,14 @@ for start (as usual user, and use "ports" part for expose)
     npm run watch      - в таком случае процесс сборки висит и следит за изменениями
 
 
+Babel support
+--------------
+see instruction on  https://babeljs.io/setup, select webpack
+
+npm install --save-dev babel-loader @babel/core
+npm install --save-dev @babel/preset-env
+
+
 
 Links
 ----------------
